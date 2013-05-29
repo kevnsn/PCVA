@@ -32,6 +32,7 @@
 
 	<!-- sample preference specification -->
 	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
+	<preference name="phonegap-version" value="2.7.0" />
 	<preference name="orientation" value="portrait" />
 	<preference name="auto-hide-splash-screen" value="false" />
 </widget>
