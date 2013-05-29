@@ -21,9 +21,12 @@
  //Helper methods to check for form completion and change button status.
 // var addformlisteners;
  //var checkSubmit;
-  
+ 
+ 
+ //--------Hack to load faster -- 
+ //http://lou.prado.me/tech_blog/how_to_fix_long_start_times_and_blank_white_screen_for_android_apps_built_on_phonegap_and_jqtouch.php
   //main string for the link for mailto:
-  
+ 
   var mailstring = "mailto:victimadvocate@peacecorps.gov?subject=PC OVA Request: "
   var bodydivider  = "&body=";
   
@@ -52,21 +55,11 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+		navigator.splashscreen.hide(); 
         //app.change('requestbutton');
-		$("#requestbutton").addClass('ui-disabled');
+		/*$("#requestbutton").addClass('ui-disabled');
 		$("#requestbutton").attr('href',mailstring); 
-		addForm();
-    },
-    // Update DOM on a Received Event
-    change: function(id) {
-		/*
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-        console.log('Received Event: ' + id);*/
-		
+		addForm();*/
     }
 };
 
@@ -110,10 +103,10 @@ checkSubmit = function(fromval)
 };
 
 //Used for debugging.
-/*
+
 $(document).ready(function() {
 		console.log("Device ready");
 		$("#requestbutton").addClass('ui-disabled');
 		$("#requestbutton").attr('href',mailstring); 
 		addForm();
-});*/
+});
