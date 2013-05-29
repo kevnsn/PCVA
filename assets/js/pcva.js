@@ -127,4 +127,5 @@ $(document).ready(function() {
 		$("#requestbutton").addClass('ui-disabled');
 		$("#requestbutton").attr('href',mailstring); 
 		addForm();
+		navigator.splashscreen.hide();
 });
