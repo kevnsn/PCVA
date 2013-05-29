@@ -30,6 +30,7 @@
  var name = "";
  var country = "";
  var date = "";
+ var telephone = "";
  var time = "";
  var timezone ="";
  var other="";
@@ -52,7 +53,6 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         //app.change('requestbutton');
-		console.log("Device ready");
 		$("#requestbutton").addClass('ui-disabled');
 		$("#requestbutton").attr('href',mailstring); 
 		addForm();
@@ -85,33 +85,35 @@ checkSubmit = function(fromval)
 {
 	if(fromval="")
 	{
-		$('#requestbutton').button('disable'); 
+		$("#requestbutton").addClass('ui-disabled'); 
 	}
 	
-	 var name = $("#name").val();
-	 var country = $("#country").val();
-	 var date = $("#startdate").val();
-	 var time = $("#time").val();
-	 var timezone =$("#timezone").val();
-	 var other=$("#other").val();;
+	 name = $("#name").val();
+	 country = $("#country").val();
+	 date = $("#startdate").val();
+	 telephone = $("#tele").val();
+	 time = $("#time").val();
+	 timezone =$("#timezone").val();
+	 other=$("#other").val();
  
-	if (name != "" && country !="" && date!=""&&time!=""&&timezone!="")
+	if (name != "" && country !="" && date!=""&&telephone!=""&&time!=""&&timezone!="")
 	{
 		var d = new Date(); // for now
 		var curr_date = d.getDate();
 		var curr_month = d.getMonth() + 1; //Months are zero based
 		var curr_year = d.getFullYear();
 		var datestring = curr_month+"/"+curr_date+"/"+curr_year;
-		mailstring = mailstring + name + " in " + country + ".  Submitted: "+ datestring + bodydivider + "Request to call the OVA sent by " + name + " currently serving in " + country +". The call is requested at:" + time + " on " +date + " GMT " + timezone; + ". Other notes: " + other;
+		mailstring = mailstring + name + " in " + country + ".  Submitted: "+ datestring + bodydivider + "Request to call the OVA sent by " + name + " ("+telephone+") currently serving in " + country +". The call is requested at:" + time + " on " +date + " GMT " + timezone; + ". Other notes: " + other;
 		$("#requestbutton").attr('href',mailstring);
-		$("#requestbutton").removeClass('ui-disabled'); 
+		$("#requestbutton").removeClass('ui-disabled'); //enable
 	}
 };
 
 //Used for debugging.
+/*
 $(document).ready(function() {
 		console.log("Device ready");
 		$("#requestbutton").addClass('ui-disabled');
 		$("#requestbutton").attr('href',mailstring); 
 		addForm();
-});
+});*/

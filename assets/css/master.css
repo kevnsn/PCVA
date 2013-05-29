@@ -43,7 +43,11 @@ h1 {
 	font-size:1.5em;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
 
-
+h2 {
+	font-size:16px;
+	margin-top:8px;
+	margin-bottom:2px;
+}
 #pclogo{
 	height:57px;
 	width:57px;
@@ -51,24 +55,39 @@ h1 {
 }
 
 #faq {
-margin-top:11px;	
+margin-top:17px;	
 }
 .bottomindent{margin-top:2px;margin-bottom:5px;}
 p, #infolist { margin:.5em 0;
 font-size:12px;}
 
-.ui-btn-inner{
+.ui-btn-inner#{
 overflow: visible !important;
 white-space: normal !important;
 }
 
-.centercontainer {
-	text-align:center;
+.container {
+	padding:10px;
+	text-align:left;
 }
+
+#faqtitle {
+color:#000000;	
+}
+
+li {font-size:12px;}
 
 .footnote { font-size:10px;
 margin:0px 20px 0px 20px;}
 
 label.ui-input-text {
-font-size:14px !important;	
+	margin-top:5px !important;
+display:block !important;
+font-size:13.5px !important;	
+}
+.instructions {
+	margin-top:13px;
+	margin-bottom:0px;
+font-size:14px;
+font-weight:500;	
 }

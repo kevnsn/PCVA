@@ -38,7 +38,12 @@
         <div id = "titletext">
             <h1>Peace Corps </h1><span class="titleholder"> Victim Advocate Portal</span>
         </div>
-        <a href="index.html" data-role="button" data-icon="info" data-iconpos="right" data-inline="true" data-mini="true" class="ui-btn-right" id = "faq">FAQ</a>
+        <a href="faq.html"  data-role="button" data-icon="info" data-iconpos="right" data-inline="true" data-mini="true" class="ui-btn-right" id = "faq" data-rel="dialog">FAQ</a>
+
+        <div data-role="popup" id="popupBasic">
+            <p>This is a completely basic popup, no options set.<p>
+        </div>
+
 	</div>
 	<div data-role="content">	
         <h2>Are you a victim?</h2>
@@ -51,7 +56,7 @@
         </ul>
     	<hr>
         <h2>Call the Office of Victim Advocacy (OVA)</h2>
-        <p>The Office of Victim Advocacy is available during normal business hours and at your convenience (schedule a call below).</p>
+        <p>The Office of Victim Advocacy is available 24/7 and at your convenience (schedule a call below).</p>
         <p class="bottomindent"> If you do not have the ability to dial internationally but have data/internet access, schedule a call and staff will reach out to you.</p>
         <a href="tel:2024092704" data-role="button" data-theme="a" id = "callbutton"  data-icon="phone" data-iconpos="left"> Call OVA at (202) 409-2704 </a>
         <hr>
@@ -61,22 +66,37 @@
 
 		<form action="#" method="get" id="required">
            <div data-role="fieldcontain">
-				<label for="name">Name:</label>
-				<input type="text" name="name" id="name" value="" placeholder="Your Full Name"/>
-                <label for="country">Country:</label>
-				<input type="text" name="country" id="country" value="" placeholder="Country"/>
-            	<label for="startdate">Date available (local):</label>
-                <input name="startdate" id="startdate" type="date" />
-                <label for="time">Time available (local): </label>
-    			<input type="time" data-clear-btn="false" name="time" id="time" value="">
-                <label for="timezone">Timezone (GMT):</label>
-                <input name="timezone" id="timezone" type="number" placeholder="Enter GMT Timezone (ex: 5 or -7)" />
+           <div class="ui-grid-a">
+				<div class="ui-block-a">
+					<label for="name">Name:</label>
+					<input type="text" name="name" id="name" value="" placeholder="Your Full Name"/>
+                </div><div class="ui-block-b">
+                	<label for="country">Country:</label>
+					<input type="text" name="country" id="country" value="" placeholder="Country"/>
+                </div>
+            </div>
+            <label for="country">Telephone:</label>
+					<input type="text" name="tele" id="tele" value="" placeholder="Phone #, include country code"/>
+            <p class="instructions">Enter a date and time you are available to receive a call.           
+            <div class="ui-grid-b">
+				<div class="ui-block-a">
+            	<label for="startdate">Date:</label>
+                <input name="startdate" id="startdate" type="text" placeholder ="mm/dd/yy" />
+                </div>
+                <div class="ui-block-b">
+                <label for="time">Time: </label>
+    			<input type="text" data-clear-btn="false" name="time" id="time" value="" placeholder = "xx:xx AM">
+                </div>
+                <div class="ui-block-c">
+                <label for="timezone">GMT:</label>
+                <input name="timezone" id="timezone" type="text" placeholder="Timezone (+5)" />
+                </div>
+             </div>
                  <label for="optional">Other notes</label>
     			<textarea cols="40" rows="8" name="optional" id="optional" placeholder="Optional"></textarea>
          </div>   
          <a href="mailto:victimadvocate@peacecorps.gov" data-role="button" type = "submit" data-theme="a" id = "requestbutton" data-icon="email" data-iconpos="left" disabled="disabled">Send Request to victimadvocate@peacecorps.gov</a>
 		</form>
-         
      
         <p class="footnote">You will be redirected to your native email application; please press 'send' <strong>again</strong> after you are transferred.</p>
         
