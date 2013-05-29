@@ -82,8 +82,13 @@ li {font-size:12px;}
 .footnote { font-size:10px;
 margin:0px 20px 0px 20px;}
 
-label.ui-input-text {
+label.ui-input-text, .ui-controlgroup-label{
 	margin-top:5px !important;
+display:block !important;
+font-size:13.5px !important;	
+}
+legend {
+		margin-top:5px !important;
 display:block !important;
 font-size:13.5px !important;	
 }
@@ -97,4 +102,10 @@ font-weight:500;
 .faqtitletext {
 	text-shadow: 0 1px 0 rgb(209, 185, 185);
 	}
+	
+.ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup {
+	margin-top:10px !important;
+}
+
+.checklist .ui-input-text.ui-shadow-inset.ui-corner-all.ui-btn-shadow.ui-body-c {margin-left:40px !important;}
 	

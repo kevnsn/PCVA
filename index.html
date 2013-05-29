@@ -42,11 +42,16 @@
             <h1>Peace Corps </h1><span class="titleholder"> Victim Advocate Portal</span>
         </div>
         <a href="faq.html"  data-role="button" data-icon="info" data-iconpos="right" data-inline="true" data-mini="true" class="ui-btn-right" id = "faq" data-rel="dialog">FAQ</a>
-
+		
         <div data-role="popup" id="popupBasic">
             <p>This is a completely basic popup, no options set.<p>
         </div>
-
+        <!-- Insert code to show loading spinner -->
+		<script>
+		$("#faq").click(
+		function (){$.mobile.showPageLoadingMsg(); }
+		);
+		</script>
 	</div>
 	<div data-role="content">	
         <h2>Are you a victim?</h2>
@@ -74,29 +79,51 @@
 					<label for="name">Name:</label>
 					<input type="text" name="name" id="name" value="" placeholder="Your Full Name"/>
                 </div><div class="ui-block-b">
-                	<label for="country">Country:</label>
-					<input type="text" name="country" id="country" value="" placeholder="Country"/>
+                     <label for="country">Telephone:</label>
+                     <input type="text" name="tele" id="tele" value="" placeholder="Phone #, w/ country code"/>
                 </div>
-            </div>
-            <label for="country">Telephone:</label>
-					<input type="text" name="tele" id="tele" value="" placeholder="Phone #, include country code"/>
-            <p class="instructions">Enter a date and time you are available to receive a call.           
-            <div class="ui-grid-b">
+            </div><div class="ui-grid-a">
 				<div class="ui-block-a">
-            	<label for="startdate">Date:</label>
-                <input name="startdate" id="startdate" type="text" placeholder ="mm/dd/yy" />
+            <label for="country">Country:</label>
+			<input type="text" name="country" id="country" value="" placeholder="Country"/>
                 </div>
                 <div class="ui-block-b">
-                <label for="time">Time: </label>
-    			<input type="text" data-clear-btn="false" name="time" id="time" value="" placeholder = "xx:xx AM">
-                </div>
-                <div class="ui-block-c">
-                <label for="timezone">GMT:</label>
-                <input name="timezone" id="timezone" type="text" placeholder="Timezone" />
+                <label for="timezone">Timezone:</label>
+                <input name="timezone" id="timezone" type="text" placeholder="ex: '-3' for GMT -3" />
                 </div>
              </div>
-                 <label for="optional">Other notes</label>
-    			<textarea cols="40" rows="8" name="optional" id="optional" placeholder="Optional"></textarea>
+             <!--<label for="time">Time: </label>
+    		 <input type="text" data-clear-btn="false" name="time" id="time" value="" placeholder = "xx:xx AM" />-->
+                               <p class="instructions">Enter a date and time you are available to receive a call.   </p>
+            	<label for="startdate">Date:</label>
+                <input name="startdate" id="startdate" type="text" placeholder ="mm/dd/yy" />
+      	  <fieldset data-role="controlgroup" class="checklist">
+                <legend>Time availablity (local):</legend>
+                <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+                <label for="checkbox-1">Before 7AM</label>
+                <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+                <label for="checkbox-2">Morning (7AM-12PM)</label>
+                <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+                <label for="checkbox-3">Afternoon (12-5PM)</label>
+                <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
+                <label for="checkbox-4">After 5PM</label>
+                <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom" />
+                <label for="checkbox-5">Specific Time</label>
+                <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" />
+                <input type="text" data-clear-btn="false" name="time" id="time" value="" placeholder = "Enter local time, ex: 12:34 PM" />
+            </fieldset>
+    
+        <fieldset data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
+    	<legend>Is this an emergency?</legend>
+         	<input type="radio" name="prev" id="radio-choice-1" value="false" checked="checked" />
+         	<label for="radio-choice-1">No</label>
+
+         	<input type="radio" name="prev" id="radio-choice-2" value="true"  />
+         	<label for="radio-choice-2">Yes</label>
+         </fieldset>
+            
+            <label for="optional">Other notes</label>
+            <textarea cols="40" rows="8" name="optional" id="optional" placeholder="Optional. Example: 'Please call at around 2-4PM' "></textarea>
          </div>   
          <a href="mailto:victimadvocate@peacecorps.gov" data-role="button" type = "submit" data-theme="a" id = "requestbutton" data-icon="email" data-iconpos="left" disabled="disabled">Send Request to victimadvocate@peacecorps.gov</a>
 		</form>
