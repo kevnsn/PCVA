@@ -1,0 +1,79 @@
+body {
+  background: #fff;
+  background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#C8C8C8), color-stop(0.47, white), to(#C8C8C8));
+  margin: 0;
+  /*font: 18px Helvetica;*/
+  /*text-align: left;*/
+}
+
+.view {
+	padding:15px;
+}
+
+[data-role="header"] {
+	text-align:center
+	}
+#titleimg {
+	display:inline-block;
+	margin-left:10px;
+  padding: 6px 3px 3px 0px;
+  margin-bottom:5px;
+}
+
+#titletext{
+	width:180px;
+	display:inline-block;	
+	text-align:left;
+}
+
+.titleholder {
+font-size:1em;
+color:#eeeeee;
+}
+h1 {
+	margin: 0px 0px 0px 0px;
+	display: inline-block;
+	position:relative;
+	bottom:3px;
+	color:#ffffff;
+	font-size:1.5em;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
+
+h2{
+	margin:2px 0px 0px 0px;
+	padding-bottom:0px;
+	display:inline-block;
+	font-size:16px;
+	position:relative;
+	/*bottom:2px;*/
+	color:rgb(10,10,10);
+}
+
+#pclogo{
+	height:44px;
+	width:44px;
+	margin-right:8px;
+}
+
+#faq {
+margin-top:11px;	
+}
+.bottomindent{margin-top:2px;margin-bottom:5px;}
+p, #infolist { margin:.5em 0;
+font-size:12px;}
+
+.ui-btn-inner{
+overflow: visible !important;
+white-space: normal !important;
+}
+
+.centercontainer {
+	text-align:center;
+}
+
+.footnote { font-size:10px;
+margin:0px 20px 0px 20px;}
+
+label.ui-input-text {
+font-size:14px;	
+}
