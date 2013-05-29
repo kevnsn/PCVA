@@ -11,13 +11,15 @@ body {
 }
 
 [data-role="header"] {
-	text-align:center
-	}
+	text-align:left;
+	padding-left:10px;
+}
+
 #titleimg {
 	display:inline-block;
 	margin-left:10px;
-  padding: 6px 3px 3px 0px;
-  margin-bottom:5px;
+  padding: 8px 0px 0px 0px;
+  margin-bottom:4px;
 }
 
 #titletext{
@@ -29,29 +31,22 @@ body {
 .titleholder {
 font-size:1em;
 color:#eeeeee;
+position:relative;
+bottom:6px;
 }
 h1 {
 	margin: 0px 0px 0px 0px;
 	display: inline-block;
 	position:relative;
-	bottom:3px;
+	bottom:6px;
 	color:#ffffff;
 	font-size:1.5em;
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;}
 
-h2{
-	margin:2px 0px 0px 0px;
-	padding-bottom:0px;
-	display:inline-block;
-	font-size:16px;
-	position:relative;
-	/*bottom:2px;*/
-	color:rgb(10,10,10);
-}
 
 #pclogo{
-	height:44px;
-	width:44px;
+	height:57px;
+	width:57px;
 	margin-right:8px;
 }
 
@@ -75,5 +70,5 @@ white-space: normal !important;
 margin:0px 20px 0px 20px;}
 
 label.ui-input-text {
-font-size:14px;	
+font-size:14px !important;	
 }
