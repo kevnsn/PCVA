@@ -140,5 +140,5 @@ $( "#OVAPage" ).on( "pageinit", function( event ) {
 		$("#time").hide();
 		$("#requestbutton").attr('href',mailstring); 
 		addForm();
-		navigator.splashscreen.hide();
+		//navigator.splashscreen.hide();
 });
