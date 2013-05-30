@@ -73,6 +73,19 @@ var app = {
 				checkSubmit(this.value);
 				//alert("changed");
 			});
+			
+			//Add listener for time filed
+			$("#checkbox-5").change(function () {
+				console.log("checkbox specific time activated"); 
+				checkSubmit(this.value);
+				if ($("#checkbox-5").prop('checked'))
+				{
+					$("#time").show();}
+					else
+					{
+						$("#time").hide();
+						}
+			});
 
     };
 
@@ -94,11 +107,11 @@ checkSubmit = function(fromval)
 	 	if(other==""){other="(none provided)";} // Add default timezone
  	 emergency=$('#radio-choice-2').prop('checked');
 	
-	c1=$("#checkbox-1").val();
-	c2=$("#checkbox-2").val();
-	c3=$("#checkbox-3").val();
-	c4=$("#checkbox-4").val();
-	c5=$("#checkbox-5").val();
+	c1=$("#checkbox-1").prop('checked');
+	c2=$("#checkbox-2").prop('checked');
+	c3=$("#checkbox-3").prop('checked');
+	c4=$("#checkbox-4").prop('checked');
+	c5=$("#checkbox-5").prop('checked');
 		 
 	if (name != "" && country !="" && date!=""&&telephone!=""&&timezone!="")
 	{	 
@@ -121,9 +134,10 @@ checkSubmit = function(fromval)
 
 //Used for debugging.
 
-$(document).ready(function() {
+$( "#OVAPage" ).on( "pageinit", function( event ) {
 		console.log("Device ready");
 		$("#requestbutton").addClass('ui-disabled');
+		$("#time").hide();
 		$("#requestbutton").attr('href',mailstring); 
 		addForm();
 		navigator.splashscreen.hide();
