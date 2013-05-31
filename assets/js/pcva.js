@@ -27,9 +27,9 @@
  //http://lou.prado.me/tech_blog/how_to_fix_long_start_times_and_blank_white_screen_for_android_apps_built_on_phonegap_and_jqtouch.php
   //main string for the link for mailto:
  
-  var mailstring = "mailto:victimadvocate@peacecorps.gov?subject="
+  var mailbase = "mailto:victimadvocate@peacecorps.gov?subject="
   var bodydivider  = "&body=";
-  
+ var mailstring;
  var name = "";
  var country = "";
  var date = "";
@@ -123,11 +123,11 @@ checkSubmit = function(fromval)
 	if (name != "" && country !="" && date!=""&&telephone!=""&&timezone!="")
 	{	 
 		if(emergency) {
-		 mailstring = mailstring + "[EMERGENCY Request]: ";  
+		 mailstring = mailbase + "[EMERGENCY Request]: ";  
 		 importance = "";
 		 }
 		 else {
-		 mailstring = mailstring + "[Request]: "; 
+		 mailstring = mailbase + "[Request]: "; 
 		 importance=" not"}
 		var d = new Date(); // for now
 		var curr_date = d.getDate();
