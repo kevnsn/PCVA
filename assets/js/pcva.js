@@ -74,6 +74,13 @@ var app = {
 				//alert("changed");
 			});
 			
+			$("#checkbox-1,#checkbox-2,#checkbox-3,#checkbox-4,#radio-choice-2").change(function () {
+				console.log(this); 
+				console.log(this.value);
+				checkSubmit(this.value);
+				//alert("changed");
+			});
+			
 			//Add listener for time filed
 			$("#checkbox-5").change(function () {
 				console.log("checkbox specific time activated"); 
@@ -103,7 +110,7 @@ checkSubmit = function(fromval)
 	 time = $("#time").val();
 	 	if(time==""){time="(none provided)";} // Add default timezone
 	 timezone =$("#timezone").val();
-	 other=$("#other").val();
+	 other=$("#optional").val();
 	 	if(other==""){other="(none provided)";} // Add default timezone
  	 emergency=$('#radio-choice-2').prop('checked');
 	
@@ -117,6 +124,7 @@ checkSubmit = function(fromval)
 	{	 
 		if(emergency) {
 		 mailstring = mailstring + "[EMERGENCY Request]: ";  
+		 importance = "";
 		 }
 		 else {
 		 mailstring = mailstring + "[Request]: "; 
@@ -126,7 +134,7 @@ checkSubmit = function(fromval)
 		var curr_month = d.getMonth() + 1; //Months are zero based
 		var curr_year = d.getFullYear();
 		var datestring = curr_month+"/"+curr_date+"/"+curr_year;
-		mailstring = mailstring + name + " (" + country + "). Submitted: "+ datestring + bodydivider + "OVA Notification: Request to contact sent by " + name + " ("+telephone+") currently serving in " + country +". %0D%0AThe timezone of the requested location is (GMT)"+ timezone+". The requester is available at the following times:%0D%0A%0D%0A Before 7AM:"+ c1+"%0D%0A 7-12AM:"+c2+"%0D%0A 12-5PM:"+c3+"%0D%0A After 5PM:"+c4+"%0D%0A Specific Time:"+c5+" %0D%0ATime provided:"+time+"%0D%0A%0D%0A The request has been marked as " + importance + " an emergency.%0D%0A %0D%0AOther notes:" + other +"%0D%0A %0D%0A- Request sent via PCOVA Portal -";
+		mailstring = mailstring + name + " (" + country + "). Submitted: "+ datestring + bodydivider + "OVA Notification: Request to contact sent by " + name + " ("+telephone+") currently serving in " + country +". %0D%0A%0D%0AThe timezone of the requested location is (GMT)"+ timezone+". The requester is available at the following times:%0D%0A%0D%0A Before 7AM:"+ c1+"%0D%0A 7-12AM:"+c2+"%0D%0A 12-5PM:"+c3+"%0D%0A After 5PM:"+c4+"%0D%0A Specific Time:"+c5+" %0D%0ATime provided:"+time+"%0D%0A%0D%0A The request has been marked as " + importance + " an emergency.%0D%0A %0D%0AOther notes:" + other +"%0D%0A %0D%0A- Request sent via PCOVA Portal -";
 		$("#requestbutton").attr('href',mailstring);
 		$("#requestbutton").removeClass('ui-disabled'); //enable
 	}
