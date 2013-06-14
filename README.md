@@ -1,6 +1,6 @@
-PhoneGap-Start
+Peace Corps Office of Victim Advocacy Portal
 ---
 
-A starting point for PhoneGap apps.
+A portal for the Peace Corps Office of Victim Advocacy (OVA).
 
-To get started: fork this repo, modify the config.xml to match your details, and get building!
+The application uses jQuery, jQuery Icon Pack, and PhoneGap.
