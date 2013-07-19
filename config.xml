@@ -25,7 +25,7 @@
 	<icon src="icon.png" gap:role="default" />
 	<icon src="iconbb.png" gap:platform="blackberry" />
 	
-    <gap:splash src="weirdo.png" />
+    <gap:splash src="splash.png" />
 
 	<!--<feature name="http://api.phonegap.com/1.0/geolocation"/>-->
 	<feature name="http://api.phonegap.com/1.0/network"/>
@@ -34,6 +34,6 @@
 	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
 	<preference name="phonegap-version" value="2.7.0" />
 	<preference name="orientation" value="portrait" />
-	<!--<preference name="auto-hide-splash-screen" value="false" />-->
-	 <preference name="splash-screen-duration" value="8000" />
+	<preference name="auto-hide-splash-screen" value="false" />
+	 <!--<preference name="splash-screen-duration" value="8000" />-->
 </widget>

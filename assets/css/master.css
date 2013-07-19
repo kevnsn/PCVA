@@ -50,6 +50,12 @@ h2 {
 	margin-top:8px;
 	margin-bottom:2px;
 }
+#faqtitle strong {
+	font-size:16px;
+	margin-top:8px;
+	margin-bottom:2px;
+	
+}
 #pclogo{
 	height:57px;
 	width:57px;
