@@ -7,7 +7,7 @@
 	<name>PC OVA Portal</name>
 
 	<description>
-		Peace Corps Office of Victim Advocacy Portal provides volunteers with the information, email, phone number, and means to contact the office for assistance.
+		The Peace Corps OVA Portal provides information to contact the Victim Advocate.
 	</description>
 
 	<author href="http://peacecorps.gov"
@@ -23,7 +23,6 @@
 	</gap:platforms>
 
 	<icon src="icon.png" gap:role="default" />
-	<icon src="iconbb.png" gap:platform="blackberry" />
 	
     <gap:splash src="splash.png" />
 
