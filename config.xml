@@ -23,7 +23,6 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
-	<icon src="icon.png" gap:role="default" />
 	
     <gap:splash src="splash.png" />
 
