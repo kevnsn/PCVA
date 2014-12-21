@@ -2,7 +2,8 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.pcgov.pcova"
-	version 	= "1.0.0">
+	versionCode 	= "89"
+	version 	= "1.0.1">
 
 	<name>PC OVA Portal</name>
 
@@ -22,7 +23,6 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
-	<icon src="icon.png" gap:role="default" />
 	
     <gap:splash src="splash.png" />
 
